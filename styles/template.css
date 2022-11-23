@@ -1,0 +1,356 @@
+/*CSS RESET*/
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, img, audio, video, em, strike, strong, ol, ul, li, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+/*COLOR DEFINITIONS*/
+:root { /*Variable definition of several commonly reused colors*/
+	--bg-blue:				#CCCCFF;
+	--head-blue:			#001199;
+	--nav-blue:				#00003A;
+	--frf-gold:				#D5A426;
+	--frf-dark-gold:		#907426;
+	--frf-gold-shadow:		#443300;
+	--frf-gold-light:		#DDEE22;
+	--frf-silver:			#888888;
+	--frf-silver-shadow:	#444444;
+	--frf-silver-light:		#CCCCCC;
+	--frf-rose-gold:		#BC6647;
+	--frf-rose-gold-shadow:	#632C19;
+	--frf-rose-gold-light:	#E2AF9E;
+	--frf-off-white:		#FFFFCC;
+}
+
+/*COMMON DESKTOP/MOBILE STYLES*/
+@media {
+	html, body {
+		background-color: var(--bg-blue);
+		width: 100%;
+		height: 100%;
+	}
+	
+	#stickyHeader { /*Header and nav bar stay at top of page when scrolling*/
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
+	header {
+		background-color: var(--head-blue);
+		width: 100%;
+	}
+
+	#headerLogo {
+		float: left;
+	}
+
+	#siteTitle {
+		font-family: Georgia;
+		font-weight: bold;
+		color: var(--frf-gold);
+		float: left;
+		vertical-align: center;
+		text-shadow: /*Text has highlight and shadow to make beveled effect*/
+			 0.01em  0.03em 0.02em var(--frf-gold-shadow),
+			-0.01em -0.03em 0.02em var(--frf-gold-light);
+	}
+
+	nav {
+		background-color: var(--nav-blue);
+		width: 100%;
+	}
+
+	#navBar {
+		list-style-type: none;
+		width: 100%;
+		height: 100%;
+	}
+
+	.navButton {
+		text-decoration: none;
+		color: black;
+		background-color: var(--frf-gold);
+		box-shadow: /*Button has top highlight and bottom shadow to make beveled effect*/
+			inset -3px -3px var(--frf-gold-shadow),
+			inset 3px 3px var(--frf-gold-light);
+	}
+	.navButton:hover { /*while button hovered over apply CSS animation*/
+		animation-name: navButtonColor;
+		animation-duration: 300ms;
+		animation-fill-mode: both;
+	}
+	@keyframes navButtonColor { /*animation to button hover colors*/
+		from {
+			background-color: var(--frf-gold);
+			box-shadow: /*Button has top highlight and bottom shadow to make beveled effect*/
+				inset -3px -3px var(--frf-gold-shadow),
+				inset 3px 3px var(--frf-gold-light);
+		}
+		to {
+			background-color: var(--frf-dark-gold);
+			box-shadow: /*Button has top shadow and bottom highlight to make embossed effect*/
+				inset -3px -3px var(--frf-gold-light),
+				inset 3px 3px var(--frf-gold-shadow);
+		}
+	}
+	.navButton:active { /*while button being clicked*/
+		background-color: var(--frf-dark-gold);
+		box-shadow: /*Button has top shadow and bottom highlight to make embossed effect*/
+			inset -3px -3px var(--frf-gold-light),
+			inset 3px 3px var(--frf-gold-shadow);
+	}
+
+	#currentButton { /*button of current page is silver and link disabled*/
+		font-weight: bold;
+		background-color: var(--frf-silver);
+		box-shadow: 
+			inset -3px -3px var(--frf-silver-shadow),
+			inset 3px 3px var(--frf-silver-light); 
+		pointer-events: none; 
+		cursor: default;  
+	}
+	
+	.pageTitle {
+		font-family: sans-serif;	
+	}
+	
+	.sectionHeading {
+		font-family: sans-serif;
+		font-weight: bold;
+	}
+	
+	section {
+		font-family: sans-serif;
+	}
+
+	.inlineImage {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	
+	.imageLabel {
+		font-style: italic;
+		font-family: serif;
+		text-align: center;
+	}
+	
+	.imageLink {
+		text-decoration: none;
+		color: black;
+	}
+	
+	footer {
+		font-style: italic;
+		font-family: serif;
+	}
+	
+	#footerLogo {
+		float: right;
+	}
+
+}
+
+/*MOBILE ONLY STYLES*/
+@media screen and (max-width: 499px) {
+	header {
+		height: 10vw;
+	}
+	
+	#headerLogo {
+		width: 14vw;
+		height: auto;
+		padding-left: 5px;
+	}
+	
+	#siteTitle {
+		font-size: 6.8vw;
+		padding: 1vw 0 0 1vw;
+	}
+	
+	nav {
+		height: 9vw;
+	}
+	
+	.navButton { /*Dynamic width nav buttons on mobile*/
+		float: left;
+		width: 23.5%;
+		height: 1.5em;
+		margin: 1vw 0 1vw 1vw;
+		padding: 1vw 0 0 0;
+		text-align: center;
+		font-size: 4vw;
+	}
+	
+	main {
+		width: 94%;
+		padding: calc(20vw + 5px) 3% 0 3% ;
+	}
+	
+	.pageTitle {
+		font-size: 8vw;
+		text-align: center;
+	}
+	
+	.sectionHeading {
+		padding-top: 5px;
+		font-size: 17.5px;
+	}
+	
+	section {
+		font-size: 16.5px;
+		padding: 5px 0 5px 0;
+	}
+	
+	p {
+		padding-bottom: 5px;
+	}
+	
+	aside { /*images appear amoungst the text on mobile rather than aside*/
+		width: 80%;
+		padding: 0 10% 0 10%;
+	}
+	
+	.imageLabel {
+		font-size: 3vw;
+	}
+	
+	footer {
+		font-size: min(3.8vw, 14px);
+		padding: 5px 1.5% 5px 3%;
+	}
+	
+	#footerLogo {
+		display: inline;
+		vertical-align: middle;
+		width: min(5.5vw, 20px);
+		height: auto;
+	}
+	
+}
+
+/*DESKTOP ONLY STYLES*/
+@media screen and (min-width: 500px) {
+	header {
+		height: 70px;
+	}
+	
+	#headerLogo {
+		width: 105px;
+		height: 70px;
+		padding-left: 5px;
+	}
+	
+	#siteTitle {
+		font-size: 50px;
+		padding: 7px 0 0 10px;
+	}
+	
+	nav {
+		height: 37px;
+	}
+	
+	.navButton { /*Fixed width nav buttons on desktop*/
+		float: left;
+		width: 110px;
+		height: 24px;
+		margin: 4px;
+		padding: 5px 0 0 0;
+		text-align: center;
+		font-size: 16px;
+	}
+	
+	main {
+		width: 98%;
+		min-height: calc(100% - 140px); /*padding for sticky footer*/
+		padding: 110px 1% 0 1%;
+	}
+	
+	.pageTitle {
+		font-size: 35px;
+	}
+	
+	.sectionHeading {
+		padding-top: 5px;
+		font-size: 17.5px;
+	}
+	
+	section {
+		width: 69%;
+		padding: 0 1% 0px 0;
+		font-size: 16.5px;
+		text-align: justify;
+	}
+	
+	p {
+		padding-bottom: 10px;
+	}
+	
+	aside {
+		float: right;
+		width: 29%;
+	}
+	
+	.imageLabel {
+		font-size: 1.9vw;
+	}
+	
+	footer {
+		font-size: 14.5px;
+		height: 20px;
+		padding: 5px 10px 5px 5px;
+	}
+	
+	#footerLogo {
+		display: inline;
+		vertical-align: middle;
+		width: 50px;
+		height: auto;
+		margin-top: -20px;
+	}
+	
+	@media screen and (max-width: 710px) {/*responsive header for desktop narrowet than 710px*/
+		#siteTitle {
+			font-size: 6.9vw;
+		}
+		#headerLogo {
+			width: 14.75vw;
+			height: auto;
+		}
+		header {
+			height: 9.9vw;
+		}
+		main {
+			padding-top: calc(9.9vw + 40px);
+		}
+	}
+	
+	@media screen and (min-width: 900px) {/*fixed image width for desktop wider than 900px*/
+		section {
+			width: calc(99% - 250px);
+		}
+		
+		aside {
+			width: 250px;
+		}
+	}
+	
+	@media screen and (min-width: 850px) {/*fixed image label font size for desktop wider than */
+		.imageLabel {
+			font-size: 16px;
+		}
+	}
+	
+	#image1 { /*Move image1 above first line of text on all pages for desktop wider than 600px*/
+		margin-top: -30px;
+	}
+	
+	@media screen and (max-width: 600px) {
+		#image1 {
+			margin-top: 0;
+		}
+	}
+}

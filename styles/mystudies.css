@@ -1,0 +1,151 @@
+/*COMMON DESKTOP/MOBILE STYLES*/
+@media {
+	table {
+		table-layout: fixed;
+		width: 100%;
+		border-collapse: collapse;
+	}
+	
+	tr:nth-child(even) { /*every even numbered row*/
+		background-color: var(--frf-silver-light);
+	}
+	tr:nth-child(odd) { /*every odd numbered row*/
+		background-color: var(--frf-off-white);
+	}
+	.colHead {
+		text-align: center;
+		border-bottom: 2px solid black;
+		border-left: 1px solid black;
+	}
+	.timeCol {
+		text-align: right;
+		font-family: monospace;
+		border-right: 2px solid black;
+	}
+	tr:nth-child(1) th { 
+		border-bottom: 2px solid black;
+	}
+	
+	.courseNum {
+		font-weight: bold;
+	}
+	.lab {
+		font-style: italic;
+	}
+	
+	#wbdv { /*COS10005*/
+		background-color: var(--frf-rose-gold);
+		box-shadow: /*Box has top highlight and bottom shadow to make beveled effect*/
+			inset -3px -3px var(--frf-rose-gold-shadow),
+			inset 3px 3px var(--frf-rose-gold-light);
+	}
+	#dbad { /*INF10002*/
+		background-color: var(--frf-gold);
+		box-shadow: /*Box has top highlight and bottom shadow to make beveled effect*/
+			inset -3px -3px var(--frf-gold-shadow),
+			inset 3px 3px var(--frf-gold-light);
+	}
+	#pslv { /*ICT10001*/
+		background-color: var(--frf-silver);
+		box-shadow: /*Box has top highlight and bottom shadow to make beveled effect*/
+			inset -3px -3px var(--frf-silver-shadow),
+			inset 3px 3px var(--frf-silver-light);
+		text-decoration: line-through; /*Class that has been dropped out of striked through*/
+	}
+	#ibis { /*INF10003*/
+		background-color: var(--frf-silver);
+		box-shadow: /*Box has top highlight and bottom shadow to make beveled effect*/
+			inset -3px -3px var(--frf-silver-shadow),
+			inset 3px 3px var(--frf-silver-light);
+		text-decoration: line-through; /*Class that has been dropped out of striked through*/
+	}
+	
+}
+
+/*MOBILE ONLY STYLES*/
+@media screen and (max-width: 499px) {
+	.tooltip { /*tooltip hover ability not compatible with mobile touch screen*/
+		visibility: hidden;
+		display: none;
+	}
+	#tableContainer { /*horizontal scrolling box for table*/
+		overflow: auto;
+		width: 100%;
+	}
+	th, td {
+		padding: 5px;
+		width: 160px;
+	}
+	.timeCol {
+		height: 10px;
+		padding-right: 5px;
+		width: 100px;
+	}
+}
+
+/*DESKTOP ONLY STYLES*/
+@media screen and (min-width: 500px) {
+	table {
+		font-size: 14px;
+	}
+	tr {
+		height: 22px;
+	}
+	.colHead {
+		font-size: min(15px, 1.8vw)
+	}
+	td {
+		width: 18%;
+		font-size: min(14px, 1.5vw);
+		padding: 5px;
+		text-align: left;
+	}
+	.timeCol {
+		padding-right: 5px;
+		width: 70px;
+	}
+	
+	.courseNum {
+		font-size: min(15px, 1.8vw);
+	}
+	
+	.tooltip { /*hidden by default*/
+		visibility: hidden;
+		background-color: var(--nav-blue);
+		color: white;
+		text-align: center;
+		font-size: 14px;
+		border-radius: 6px;
+		padding: 5px 0;
+		position: absolute;
+		display: inline;
+		z-index: 1;
+		width: 120px;
+		margin: -30px 0 0 -130px;
+	}
+	.lect:hover .tooltip { /*when lecture hovered over, show tooltip animation*/
+		animation-name: tooltipFade;
+		animation-delay: 500ms;
+		animation-duration: 500ms;
+		animation-fill-mode: both;
+	}
+	.lab:hover .tooltip { /*when lab hovered over, show tooltip animation*/
+		animation-name: tooltipFade;
+		animation-delay: 500ms;
+		animation-duration: 500ms;
+		animation-fill-mode: both;
+	}
+	@keyframes tooltipFade { /*tooltip fade in animation*/
+		from {visibility: visible; opacity: 0;}
+		to {visibility: visible; opacity: 1;}
+	}
+
+	/*Move images vertically for desktop*/
+	#image2 {
+		margin-top: -320px;
+	}
+	#image3 {
+		margin-top: -350px;
+	}
+
+}

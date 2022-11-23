@@ -1,0 +1,28 @@
+/*COMMON DESKTOP/MOBILE STYLES*/
+@media {
+	#trainList li {
+		padding-bottom: 10px;
+	}
+}
+
+/*MOBILE ONLY STYLES*/
+@media screen and (max-width: 499px) {
+	#trainList {
+		margin-left: 20px;
+	}
+}
+
+/*DESKTOP ONLY STYLES*/
+@media screen and (min-width: 500px) {
+	#trainList {
+		margin-left: 30px;
+	}
+	
+	/*Move images vertically for desktop*/
+	#image3 {
+		margin-top: 100px;
+	}
+	#image4 {
+		margin-top: -210px;
+	}
+}

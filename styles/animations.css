@@ -1,0 +1,85 @@
+/*COMMON DESKTOP/MOBILE STYLES*/
+@media {
+	#timetableClass {
+		background-color: var(--frf-rose-gold);
+		box-shadow: /*Box has top highlight and bottom shadow to make beveled effect*/
+			inset -3px -3px var(--frf-rose-gold-shadow),
+			inset 3px 3px var(--frf-rose-gold-light);
+		display: block;
+		width: 140px;
+		height: 70px;
+		padding: 5px;
+		margin-left: 140px;
+	}
+	.courseNum {
+		font-weight: bold;
+	}
+	#classLink {
+		text-decoration: none;
+		color: black;
+	}
+	#fakeNavButtons {
+		margin-bottom: 10px;
+		font-family: serif;
+	}
+}
+
+/*MOBILE ONLY STYLES*/
+@media screen and (max-width: 499px) {
+	.tooltip { /*tooltip hover ability not compatible with mobile touch screen*/
+		visibility: hidden;
+	}
+	
+	.codeImage {
+		width: 90%;
+		padding: 5px 5% 0 5%
+	}
+	
+	#fakeNavButtons .navButton {
+		width: 27%;
+	}
+}
+
+/*DESKTOP ONLY STYLES*/
+@media screen and (min-width: 500px) {
+	section { /*Overide template.css width*/
+		width: 64%;
+	}
+	aside { /*Overide template.css width*/
+		width: 34%;
+	}
+	
+	.tooltip { /*hidden by default*/
+		visibility: hidden;
+		background-color: var(--nav-blue);
+		color: white;
+		text-align: center;
+		font-size: 14px;
+		border-radius: 6px;
+		padding: 5px 0;
+		position: absolute;
+		display: inline;
+		z-index: 1;
+		width: 120px;
+		margin: -50px 0 0 -130px;
+	}
+	.lab:hover .tooltip { /*when lab hovered over, show tooltip animation*/
+		animation-name: tooltipFade;
+		animation-delay: 500ms;
+		animation-duration: 500ms;
+		animation-fill-mode: both;
+	}
+	@keyframes tooltipFade { /*tooltip fade in animation*/
+		from {visibility: visible; opacity: 0;}
+		to {visibility: visible; opacity: 1;}
+	}
+	
+	.codeImage { /*inline images on desktop*/
+		width: max(60%, 320px);
+		height: auto;
+	}
+	
+	#image1 { /*Override template.css style*/
+			margin-top: 0;
+		}
+}

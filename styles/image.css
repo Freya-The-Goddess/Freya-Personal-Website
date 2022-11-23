@@ -1,0 +1,33 @@
+/*COMMON DESKTOP/MOBILE STYLES*/
+@media {
+	#imageContainer {
+		width: 100%;
+	}
+}
+	
+/*MOBILE ONLY STYLES*/
+@media screen and (max-width: 500px) {
+	#imageTag { /*image is double width of screen*/
+		width: 200%;
+		height: auto;
+	}
+	#imageContainer { /*horizontal scrolling box for image*/
+		width: 100%;
+		overflow: auto;
+	}
+}
+
+/*DESKTOP ONLY STYLES*/
+@media screen and (min-width: 500px) {
+	#imageTag { /*Image is full width of screen*/
+		width: 100%;
+		height: auto;
+		padding-top: 5px;
+	}
+	footer {
+		margin-top: 10px;
+	}
+	#footerLogo {
+		margin-top: -12px;
+	}
+}

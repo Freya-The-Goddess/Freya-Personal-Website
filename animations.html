@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Freya's Assignment 01 Website" />
+    <meta name="keywords"    content="Freya Trains Rail Web Development" />
+    <meta name="author"      content="Freya-The-Goddess" />
+    <meta name="viewport"    content="width=device-width" />
+    <link href="../icons/frf-favicon.ico" rel="icon"          type="image/x-icon" />
+    <link href="../icons/frf-favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="styles/template.css"      rel="stylesheet"    type="text/css" /> <!--Template styles for all webpages-->
+    <link href="styles/animations.css"    rel="stylesheet"    type="text/css" /> <!--Specific styles for only this webpage-->
+    <title>Animations</title>
+</head>
+<body>
+
+<div id="stickyHeader"> <!--Header stays at top of screen even when scrolling content-->
+    <header>
+        <a href="index.html">
+        <img src="images/frf-logo.png" alt="FRF Logo" id="headerLogo"/></a>
+        <h1 id="siteTitle">Freya's Rail Films</h1>
+    </header>
+
+    <nav><ul id="navBar">
+        <li><a href="index.html"    class="navButton" >About Me</a></li>
+        <li><a href="mystudies.html"  class="navButton" >My Studies</a></li>
+        <li><a href="contactme.html"  class="navButton" >Contact Me</a></li>
+        <li><a href="animations.html" class="navButton" id="currentButton">Animations</a></li>
+    </ul></nav>
+</div>
+
+<main>
+<h2 class="pageTitle">CSS Animations</h2>
+
+<aside id="image1">
+    <a href="image.html?k190-a2-986.gif&ref=animations.html" class="imageLink">
+        <img src="images/k190-a2-986.gif" alt="K190 and A&sup2;986 on Suburban Steam Shuttles" class="inlineImage"/>
+        <div class="imageLabel">K190 and A&sup2;986 push/pulling 'Suburban Steam Shuttles' past Brighton Beach</div>
+    </a>
+</aside>
+
+<section>
+    <h3 class="sectionHeading">Navigation Bar Animation</h3>
+    <p>
+    This website contains various CSS animations, including the navigation bar on every page:
+    </p>
+</section>
+<section id="fakeNavButtons"> <!--Nav button examples to show off the CSS animation styling-->
+    <a href="index.html"   class="navButton" >About Me</a>
+    <a href="animations.html" class="navButton" id="currentButton">Animations</a>
+</section>
+<br/><br/>
+<section>
+    <p>
+    When a clickable button is hovered over, a 300ms animation fades the color to a darker gold and flips the bevel colors (creating the impression of the bevel becoming embossed). The link for the current page appears in silver and is not clickable.
+    </p>
+    <a href="image.html?navbutton-css.png&ref=animations.html" class="imageLink">
+        <img src="images/navbutton-css.png" alt="Nav button CSS code" class="codeImage" /> <!--CSS code image-->
+    </a>
+</section>
+<br/>
+
+<section>
+    <h3 class="sectionHeading">Class Timetable Tooltips Animation</h3>
+    <p>
+    The 'My Studies' page also has a CSS animation on the tooltips with additional information like class time and classroom:
+    </p>
+    <a href="mystudies.html" id="classLink">
+        <div class="lab" id="timetableClass"> <!--Hover triggered tooltip with additional class information-->
+            <span class="courseNum">COS10005</span><br/>
+            Web Development - Lab<br/>
+            <span class="tooltip">
+                COS10005<br/>
+                10:30am-11:30am<br/>
+                BA 411
+            </span>
+        </div>
+    </a>
+    <p>
+    When the subject is hovered over, a 500ms delay is triggered followed by a 500ms animation fading the tooltip's opacity from 0 (transparent) to 1 (fully opaque), revealing it to the reader smoothly.
+    </p>
+    <a href="image.html?tooltip-css.png&ref=animations.html" class="imageLink">
+        <img src="images/tooltip-css.png" alt="Nav button CSS code" class="codeImage"/> <!--CSS code image-->
+    </a>
+</section>
+<br/>
+
+<section>
+    <h3 class="sectionHeading">Full Screen Images</h3>
+    <p>
+    All Images can also be clicked on to view them full size, leading to the page image.html with a custom request in the URL, including the image file and the ref to the original page.
+    A JavaScript file image.js reads the parameters from the URL and displays the correct image, and if a reference to the previous page is included, a "Go Back" link.
+    </p>
+    <p>
+    Try testing it out by clicking any of the photos on this (or any) page!
+    </p>
+</section>
+<br/>
+
+</main>
+
+<footer>
+    &copy; Freya's Rail Films (Freya-The-Goddess) - 2020.
+    <img src="images/frf-logo-black.png" alt="FRF Logo Black" id="footerLogo"/>
+</footer>
+
+</body>
+</html>

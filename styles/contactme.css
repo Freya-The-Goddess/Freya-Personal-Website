@@ -1,0 +1,134 @@
+/*COMMON DESKTOP/MOBILE STYLES*/
+@media {
+	.req {
+		color: #FF0000;
+		font-weight: bold;
+	}
+	#requiredWarning {
+		color: #FF0000;
+	}
+	
+	#formPhCode, #formPhone {
+		font-family: monospace;
+	}
+	
+	.formText, #formMessage, #formPhCode {
+		background-color: var(--frf-off-white);
+	}
+	
+	#formMessage {
+		resize: none;
+		overflow:hidden;
+		font-family: sans-serif;
+	}
+	
+	#charCount {
+		color: #666666;
+		font-family: monospace;
+		vertical-align: bottom;
+	}
+	
+	#formSubmit {
+		background-color: var(--frf-gold);
+	}
+	
+	#thankyou {
+		color: #11CC33;
+		font-weight: bold;
+	}
+}
+
+/*MOBILE ONLY STYLES*/
+@media screen and (max-width: 499px) {
+	#contactForm {
+		font-size: 16.5px;
+	}
+	
+	#requiredWarning {
+		font-size: 14.5px;
+	}
+	.formLabel {
+		width: 94%;
+		display: block;
+		font-size: inherit;
+	}
+	.formText {
+		width: 94%;
+		font-size: inherit;
+	}
+	#formPhCode {
+		width: 7em;
+		font-size: inherit;
+	}
+	#formPhone {
+		width: calc(94% - 8em);
+	}
+	#formMessage {
+		font-size: inherit;
+		width: 94%;
+		min-height: 5em;
+	}
+	#charCount {
+		font-size: 14px;
+		display: block;
+		width: 98%;
+		text-align: right;
+		margin-top: -25px;
+	}
+	#formSubmit {
+		font-size: inherit;
+	}
+}
+
+/*DESKTOP ONLY STYLES*/
+@media screen and (min-width: 500px) {
+	#contactForm {
+		text-align: left;
+	}
+	
+	#requiredWarning {
+		font-size: 12px;
+	}
+	
+	.formLabel {
+		width: 95px;
+		display: inline-block;
+		font-size: 16px;
+	}
+	
+	.formText {
+		width: 220px;
+	}
+	
+	#formPhCode {
+		width: 6em;
+	}
+	#formPhone {
+		width: calc(215px - 6em);
+	}
+	
+	#formMessage {
+		vertical-align: top;
+		width: max(50%, 220px);
+		min-height: 5em;
+		max-height: 30em;
+	}
+	
+	#charCount {
+		font-size: 14px;
+		margin-left: -65px;
+	}
+	
+	#formSubmit {
+		margin-left: 100px;
+	}
+	
+	#thankyou {
+		margin-left: 100px;
+	}
+	
+	/*Move image vertically for desktop*/
+	#image2 {
+		margin-top: calc(-195px + 6vw);
+	}
+}

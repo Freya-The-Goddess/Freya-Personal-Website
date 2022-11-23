@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Freya's Assignment 01 Website" />
+    <meta name="keywords"    content="Freya Trains Rail Web Development" />
+    <meta name="author"      content="Freya-The-Goddess" />
+    <meta name="viewport"    content="width=device-width" />
+    <link href="../icons/frf-favicon.ico" rel="icon"          type="image/x-icon" />
+    <link href="../icons/frf-favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="styles/template.css"      rel="stylesheet"    type="text/css" /> <!--Template styles for all webpages-->
+    <link href="styles/mystudies.css"     rel="stylesheet"    type="text/css" /> <!--Specific styles for only this webpage-->
+    <title>My Studies</title>
+</head>
+<body>
+
+<div id="stickyHeader"> <!--Header stays at top of screen even when scrolling content-->
+    <header>
+        <a href="index.html">
+        <img src="images/frf-logo.png" alt="FRF Logo" id="headerLogo"/></a>
+        <h1 id="siteTitle">Freya's Rail Films</h1>
+    </header>
+
+    <nav><ul id="navBar">
+        <li><a href="index.html"    class="navButton" >About Me</a></li>
+        <li><a href="mystudies.html"  class="navButton" id="currentButton">My Studies</a></li>
+        <li><a href="contactme.html"  class="navButton" >Contact Me</a></li>
+        <li><a href="animations.html" class="navButton" >Animations</a></li>
+    </ul></nav>
+</div>
+
+<main>
+<h2 class="pageTitle">My Studies</h2>
+
+<aside id="image1">
+    <a href="image.html?h220-heavyharry.png&ref=mystudies.html" class="imageLink">
+        <img src="images/h220-heavyharry.png" alt="Freya leaning against H220 'Heavy Harry'" class="inlineImage"/>
+        <div class="imageLabel">H220 'Heavy Harry', Largest steam locomotive ever built in Australia</div>
+    </a>
+</aside>
+
+<section>
+    <p>
+    I am currently studying my first year of the <em>Bachelors Degree of Information &amp; Communication Technology</em> at <em>Swinburne University of Technology</em>, Hawthorn Campus.
+    I started the year studying four units in-class, however due to the outbreak of COVID-19 and the transition to online-only study, I have decided to decrease my workload to part-time, dropping two subjects which I will complete at a later semester.
+    </p>
+    <p>
+    This was my in-class timetable for Semester 1 2020, before dropping two subjects (which have been striked out), and before times changing with online delivery:
+    </p>
+</section>
+
+<section id="tableContainer"> <!--container allows horizontal scrolling of table on mobile-->
+    <table id="studyTimetable"> <!--timetable of studies at Swinburne-->
+        <tr><th class="timeCol">&nbsp;</th><th class="colHead">Monday</th><th class="colHead">Tuesday</th><th class="colHead">Wednesday</th><th class="colHead">Thursday</th><th class="colHead">Friday</th></tr>
+        <tr><th class="timeCol">&nbsp;8:00 am</th><td colspan=5>&nbsp;</td></tr>
+        <tr><th class="timeCol">&nbsp;</th><td>&nbsp;</td><td rowspan=4 class="lect" id="ibis"><span class="courseNum">INF10003</span><br/>Integrated Business Information Systems - Lecture<br/><span class="tooltip">INF10003<br/>8:30am-10:30am<br/>ACT 101</span></td><td>&nbsp;</td><td rowspan=4 class="lab" id="pslv"><span class="courseNum">ICT1001</span><br/>Problem Solving with ICT - Lab<br/><span class="tooltip">ICT10001<br/>8:30am-10:30am<br/>EN 405</span></td><td rowspan=4 class="lab" id="dbad"><span class="courseNum">INF10002</span><br/>Database Analysis &amp; Design - Lab<br/><span class="tooltip">INF10002<br/>8:30am-10:30am<br/>BA 601</span></td></tr>
+        <tr><th class="timeCol">&nbsp;9:00 am</th><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><th class="timeCol">&nbsp;</th><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><th class="timeCol">10:00 am</th><td>&nbsp;</td><td>&nbsp;</td></tr>
+        <tr><th class="timeCol">&nbsp;</th><td>&nbsp;</td><td rowspan=4 class="lect" id="dbad"><span class="courseNum">INF10002</span><br/>Database Analysis &amp; Design - Lecture<br/><span class="tooltip">INF10002<br/>10:30am-12:30pm<br/>AMDC 301</span></td><td colspan=2>&nbsp;</td><td rowspan=2 class="lab" id="wbdv"><span class="courseNum">COS10005</span><br/>Web Development - Lab<br/><span class="tooltip">COS10005<br/>10:30am-11:30am<br/>BA 411</span></td></tr>
+        <tr><th class="timeCol">11:00 am</th><td>&nbsp;</td><td colspan=2>&nbsp;</td></tr>
+        <tr><th class="timeCol">&nbsp;</th><td>&nbsp;</td><td colspan=3>&nbsp;</td></tr>
+        <tr><th class="timeCol">12:00 pm</th><td>&nbsp;</td><td colspan=3>&nbsp;</td></tr>
+        <tr><th class="timeCol">&nbsp;</th><td colspan=3>&nbsp;</td><td rowspan=4 class="lect" id="wbdv"><span class="courseNum">COS10005</span><br/>Web Development - Lecture<br/><span class="tooltip">COS10005<br/>12:30pm-2:30pm<br/>EN 515</span></td><td rowspan=4 class="lab" id="ibis"><span class="courseNum">INF10003</span><br/>Integrated Business Information Systems - Lab<br/><span class="tooltip">INF10003<br/>12:30pm-2:30pm<br/>EN 402</span></td></tr>
+        <tr><th class="timeCol">&nbsp;1:00 pm</th><td colspan=3>&nbsp;</td></tr>
+        <tr><th class="timeCol">&nbsp;</th><td colspan=3>&nbsp;</td></tr>
+        <tr><th class="timeCol">&nbsp;2:00 pm</th><td colspan=3>&nbsp;</td></tr>
+        <tr><th class="timeCol">&nbsp;</th><td colspan=2>&nbsp;</td><td rowspan=2 class="lect" id="pslv"><span class="courseNum">ICT10001</span><br/>Problem Solving with ICT - Lecture<br/><span class="tooltip">ICT10001<br/>2:30pm-3:30pm<br/>EN 413</span></td><td colspan=2>&nbsp;</td></tr>
+        <tr><th class="timeCol">&nbsp;3:00 pm</th><td colspan=2>&nbsp;</td><td colspan=2>&nbsp;</td></tr>
+        <tr><th class="timeCol">&nbsp;</th><td colspan=5>&nbsp;</td></tr>
+        <tr><th class="timeCol">&nbsp;4:00 pm</th><td colspan=5>&nbsp;</td></tr>
+    </table>
+</section>
+<br/>
+
+<aside id="image2">
+    <a href="image.html?overland-504.png&ref=mystudies.html" class="imageLink">
+        <img src="images/overland-504.png" alt="Freya leaning against 504" class="inlineImage"/>
+        <div class="imageLabel">504 ex-locomotive of "The Overland" service, in Port Adelaide</div>
+    </a>
+</aside>
+
+<section>
+    <p>
+    My interest in programming and IT started at a young age, where the first programming language I learnt was Python over the summer school holidays. 
+    I started where everyone starts with a simple "Hello world", from then on I've been hooked! 
+    I spent my free time tinkering with programs, pushing the limits and seeing what I could accomplish, the whole time learning new skills and developing my understanding and logical thinking.
+    </p>
+    <p>
+    After I'd exhausted myself over Python's simple functionality, I moved on to some basic HTML and CSS programming. 
+    Again plenty of time was spent tinkering and throwing webpages together and after once again starting to bore, I discovered Javascript.
+    This new tool I'd found let me combine the logical mathematical thinking I learned from Python with the visual programming I learned from HTML/CSS, and my creativity expanded massively.
+    </p>
+    <p>
+    By the time I got to Year 11 in highschool I elected to study both Unit 1&amp;2 <em>'Computing'</em> and Year 12 Unit 3&amp;4 <em>'Software Development'</em> classes concurrently in the same year.
+    <em>'Computing'</em>> introduced me to Microsoft Access databases, and deepened my understanding of Microsoft Excel spreadsheets and functions.
+    <em>'Software Development'</em> allowed me to expand my knowledge and skills in Python, including learning the use of external libraries like PyGame to implement visuals.
+    </p>
+    <p>
+    In year 12 I studied two university subjects online from <em>Deakin University</em> 'Accelerate' program, one in each semester. 
+    In semester 1 I did <em>'Robotics'</em>, where we learned to program Aldebaran Nao mini humanoid robots, learning how to use code to interact with the physical world (even though we were in an online class observing the robots we were controlling via classroom cameras).
+    In semester 2 I did <em>'Data Capture Technologies'</em>, where we learned to use an Arduino board with various sensors to gather and utilise data, further developing my understanding of interacting ode with the physical world, as well as expanding my knowledge of electronics further.
+    </p>
+    <p>
+    Last year was my first year at <em>Swinburne</em>, studying the TAFE <em>Cert IV in Information Technology Networking</em>.
+    I learned how to set up and configure Cisco networking equipment including Routers and Switches, as well as how to install and configire opetating systems and servers, and an introduction to network security.
+    </p>
+    <p>
+    This year I was intending to study the <em>Diploma in Information Technology Networking</em>, 
+    however due to lack of numbers the course was cancelled and I was offered the <em>Bachelors Degree of Information &amp; Communication Technology</em> instead.
+    </p>
+</section>
+
+<aside id="image3">
+    <a href="image.html?overland-624.png&ref=mystudies.html" class="imageLink">
+        <img src="images/overland-624.png" alt="Freya leaning against 624" class="inlineImage"/>
+        <div class="imageLabel">624 ex-locomotive of "The Overland" service, in Port Adelaide</div>
+    </a>
+</aside>
+</main>
+
+<footer>
+    &copy; Freya's Rail Films (Freya-The-Goddess) - 2020.
+    <img src="images/frf-logo-black.png" alt="FRF Logo Black" id="footerLogo"/>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Freya's Assignment 01 Website" />
+    <meta name="keywords"    content="Freya Trains Rail Web Development" />
+    <meta name="author"      content="Freya-The-Goddess" />
+    <meta name="viewport"    content="width=device-width" />
+    <link href="../icons/frf-favicon.ico" rel="icon"          type="image/x-icon" />
+    <link href="../icons/frf-favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="styles/template.css"      rel="stylesheet"    type="text/css" /> <!--Template styles for all webpages-->
+    <link href="styles/image.css"         rel="stylesheet"    type="text/css" /> <!--Specific styles for only this webpage-->
+    <script src="scripts/image.js"></script> <!--Script for fetching url parameters and inserting image into webpage-->
+    <title>Image Not Found</title> <!--Default title, replaced by javascript if file found-->
+</head>
+<body onload="getImage()"> <!--Run javascript function once the page body has loaded-->
+
+<div id="stickyHeader"> <!--Header stays at top of screen even when scrolling content-->
+    <header>
+        <a href="index.html">
+        <img src="images/frf-logo.png" alt="FRF Logo" id="headerLogo"/></a>
+        <h1 id="siteTitle">Freya's Rail Films</h1>
+    </header>
+
+    <nav><ul id="navBar">
+        <li><a href="index.html"    class="navButton" >About Me</a></li>
+        <li><a href="mystudies.html"  class="navButton" >My Studies</a></li>
+        <li><a href="contactme.html"  class="navButton" >Contact Me</a></li>
+        <li><a href="animations.html" class="navButton" >Animations</a></li>
+    </ul></nav>
+</div>
+
+<main>
+    <h2 class="pageTitle" id="pageTitle">Image Not Found</h2> <!--Default page title, replaced by javascript if file found-->
+    <section id="backLink"></section> <!--Javascript adds link back to previous page if ref= is included in the url-->
+
+    <div id="imageContainer">
+        <img src="" alt="Image Not Found" id="imageTag"> <!--Default image tag, replaced by javascript if file found-->
+    </div>
+</main>
+
+<footer>
+    &copy; Freya's Rail Films (Freya-The-Goddess) - 2020.
+    <img src="images/frf-logo-black.png" alt="FRF Logo Black" id="footerLogo"/>
+</footer>
+
+</body>
+</html>
