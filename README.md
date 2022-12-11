@@ -43,3 +43,6 @@ src=".docs/My-Studies-Mobile.png"    alt="My Studies Page (mobile)" width="20%" 
 src=".docs/Contact-Me-Mobile.png"    alt="Contact Me Page (mobile)" width="20%" /><img
 src=".docs/Animations-Mobile.png"    alt="Animations Page (mobile)" width="20%" /><img
 src=".docs/Image-Mobile.png"         alt="Image Page (mobile)"      width="20%" />
+
+<br/>***Copyright © - 2022 Freya-The-Goddess***<br/>
+*This software is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).*
