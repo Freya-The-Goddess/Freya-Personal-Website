@@ -44,5 +44,9 @@ src=".docs/Contact-Me-Mobile.png"    alt="Contact Me Page (mobile)" width="20%" 
 src=".docs/Animations-Mobile.png"    alt="Animations Page (mobile)" width="20%" /><img
 src=".docs/Image-Mobile.png"         alt="Image Page (mobile)"      width="20%" />
 
-<br/>***Copyright © - 2022 Freya-The-Goddess***<br/>
-*This software is licensed under the [MIT License](https://choosealicense.com/licenses/mit/).*
+## Copyright and Licenses
+***Copyright © - 2022 Freya-The-Goddess***<br/>
+*All code, scripts and documentation in this software are licensed under the [MIT License](https://choosealicense.com/licenses/mit/).*
+
+***CC BY - 2022 Freya-The-Goddess***<br/>
+*All assets in this software (files in [/images](/images/) folder) unless noted otherwise are licensed under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/).*
